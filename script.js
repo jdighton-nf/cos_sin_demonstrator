@@ -171,16 +171,16 @@ class Vector {
         // floating reading for cos
         ctx.fillStyle = 'black';
         ctx.font = "15px Arial";
-        coords = this.field.translate((this.x / 2), -10);
-        let cos = 0 
-        ctx.fillText(`cos(theta) ${cos}`, coords[0], coords[1]);
+        coords = this.field.translate((this.x / 2) - 50, -10);
+        let cos = (1 / this.mag * this.x).toPrecision(3); 
+        ctx.fillText(`cos(theta)= ${cos}`, coords[0], coords[1]);
 
         // floating reading for sin
         ctx.fillStyle = 'black';
         ctx.font = "15px Arial";
-        coords = this.field.translate(-80, (this.y / 2));
-        let sin = 0 ;
-        ctx.fillText(`sin(theta) ${sin}`, coords[0], coords[1]);
+        coords = this.field.translate(-120, (this.y / 2));
+        let sin = (1 / this.mag * this.y).toPrecision(3) ;
+        ctx.fillText(`sin(theta)= ${sin}`, coords[0], coords[1]);
      
 
     }

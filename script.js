@@ -151,7 +151,7 @@ class Vector {
         ctx.stroke();
         ctx.closePath()
 
-        // floating verticle refrence line
+        // floating verticle reference line
         ctx.strokeStyle = 'grey';
         ctx.lineWidth = 1;
         ctx.beginPath()
@@ -167,6 +167,20 @@ class Vector {
         ctx.font = "20px Arial";
         coords = this.field.translate(20, 20);
         ctx.fillText(`theta ${this.theta.toPrecision(3)}`, coords[0], coords[1]);
+
+        // floating reading for cos
+        ctx.fillStyle = 'black';
+        ctx.font = "15px Arial";
+        coords = this.field.translate((this.x / 2), -10);
+        let cos = 0 
+        ctx.fillText(`cos(theta) ${cos}`, coords[0], coords[1]);
+
+        // floating reading for sin
+        ctx.fillStyle = 'black';
+        ctx.font = "15px Arial";
+        coords = this.field.translate(-80, (this.y / 2));
+        let sin = 0 ;
+        ctx.fillText(`sin(theta) ${sin}`, coords[0], coords[1]);
      
 
     }
